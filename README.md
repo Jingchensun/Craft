@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-# Contrastive Representation Learning Improves Robustness of Multi-modal Prompt Tuning [ECCV 2024 Submission]
-=======
-# Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning [WACV 2025 Submission]
->>>>>>> b7056aef81b53bd0c2bea74743326903998fb67c
+
+# [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning
+![clap_diagrams](main.png)
 
 # Installation
 
 This codebase is tested on Ubuntu 20.04.2 LTS with python 3.8. Follow the below steps to create environment and install dependencies.
+
 
 * Setup conda environment (recommended).
 ```bash
@@ -17,11 +16,25 @@ conda create -y -n craft python=3.8
 conda activate maple
 
 # Install torch (requires version >= 1.8.1) and torchvision
-# Please refer to https://pytorch.org/ if you need a different cuda version
 pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
 ```
 
-* Install dassl library.
+
+* Clone this code repository and install requirements
+```bash
+# Clone MaPLe code base
+git clone git@github.com:Jingchensun/Craft.git
+
+cd Craft
+# Install requirements
+
+pip install -r requirements.txt
+
+# Update setuptools package 
+pip install setuptools==59.5.0
+```
+
+* Install Dassl Library.
 ```bash
 # Instructions borrowed from https://github.com/KaiyangZhou/Dassl.pytorch#installation
 
@@ -37,19 +50,7 @@ python setup.py develop
 cd ..
 ```
 
-* Clone this code repository and install requirements
-```bash
-# Clone MaPLe code base
-git clone this repo
 
-cd My-mpt/
-# Install requirements
-
-pip install -r requirements.txt
-
-# Update setuptools package 
-pip install setuptools==59.5.0
-```
 # Training and Evaluation
 
 We provide bash scripts in 'train.sh' for each language prompting tuning and multi-modal prompt tuning.
@@ -114,3 +115,15 @@ The above steps can be repeated for other individual datasets.
 
 Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp) and [Maple](https://github.com/muzairkhattak/multimodal-prompt-learning) repository. We thank the authors for releasing their code. 
 
+## Citing Craft
+
+If you find this repository useful, please consider giving a star :star: and citation
+
+```
+@inproceedings{girdhar2023imagebind,
+  title={Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning},
+  author={Jingchen Sun, Rohan Sharma, Vishnu Suresh Lokhande, Changyou Chen},
+  booktitle={WACV},
+  year={2025}
+}
+```
