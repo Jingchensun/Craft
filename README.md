@@ -12,7 +12,7 @@ This codebase is tested on Ubuntu 20.04.2 LTS with python 3.8. Follow the below 
 conda create -y -n craft python=3.8
 
 # Activate the environment
-conda activate maple
+conda activate craft
 
 # Install torch (requires version >= 1.8.1) and torchvision
 pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
@@ -49,30 +49,31 @@ python setup.py develop
 cd ..
 ```
 
+## 1 Dataset Download
 
-# Training and Evaluation
+Following the Instruction of CoOp to download the 11 classfication [DATASETS](https://github.com/KaiyangZhou/CoOp/blob/main/DATASETS.md)
 
-We provide bash scripts in 'train.sh' for each language prompting tuning and multi-modal prompt tuning.
-Make sure to configure the dataset paths in environment variable `DATA` and run the commands from the main directory `multimodal-prompt-learning/`. Below we provide training and evaluation instructions for MaPLe.
+## 2 Prepare the Static Anchors
+Save all the image features to the cache.
+```bash
+cd lpclip
+bach maple.sh
+```
 
+Using K-Means to select the static anchor of image features.
+```bash
+cd lpclip
+python static_anchor.py
+```
+## 3 Training and Evaluation
 
-### Trainiand Evaulation
+The default training settings are provided in config file at `configs/trainers/MaPLe/vit_b16_c2_ep5_batch4_2ctx.yaml`. All hyper-parameters such as prompt length, prompt depth, etc., can be modified using this config file. 
 
-The default training settings are provided in config file at `configs/trainers/MaPLe/vit_b16_c2_ep5_batch4_2ctx.yaml`. All hyper-parameters such as prompt length, prompt depth, etc., can be modified using this config file. When the ""
-
-We provide bash scripts in [scripts/](../scripts) for language prompting and multi-modal prompt tuning.
-When "DATASET.SUBSAMPLE_CLASSES" in the scripts is set as "ALL", that is used for in distribution setting; when "DATASET.SUBSAMPLE_CLASSES" is set as "Base", that is used for out of distribution setting.
+<!-- When `DATASET.SUBSAMPLE_CLASSES` in the scripts is set as `ALL`, that is used for in distribution setting; when `DATASET.SUBSAMPLE_CLASSES` is set as `Base`, that is used for out of distribution setting. -->
 
 
 ```bash
-# Other possible dataset values includes [caltech101, food101, dtd, ucf101, oxford_flowers, oxford_pets, fgvc_aircraft, stanford_cars, sun397, eurosat]
-
-# seed=1, 2, 3
-# trains and evaluates on base classes
-bash scripts/maple/base2new_train_maple.sh imagenet 
-# evaluates on novel classes
-bash scripts/maple/base2new_test_maple.sh imagenet 
-
+bach maple.sh
 ```
 
 #### Averaging results over 3 seeds: 
@@ -101,12 +102,9 @@ output
 
 Now use the script `parse_test_res.py` and run the commands below to calculate the averaged results:
 ```bash
-# prints averaged results for base classes
-python parse_test_res.py output/base2new/train_base/imagenet/shots_16/MaPLe/vit_b16_c2_ep5_batch4_2ctx
-# averaged results for novel classes
-python parse_test_res.py output/base2new/test_new/imagenet/shots_16/MaPLe/vit_b16_c2_ep5_batch4_2ctx --test-log
+python utils/acc_info.py
 ```
-The above steps can be repeated for other individual datasets.
+The evaulation result will save to acc.json file.
 
 
 
