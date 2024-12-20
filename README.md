@@ -1,7 +1,6 @@
 
-# [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning
 ![clap_diagrams](main.png)
-
+### [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning
 # Installation
 
 This codebase is tested on Ubuntu 20.04.2 LTS with python 3.8. Follow the below steps to create environment and install dependencies.
@@ -113,17 +112,17 @@ The above steps can be repeated for other individual datasets.
 
 ## Acknowledgements
 
-Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp) and [Maple](https://github.com/muzairkhattak/multimodal-prompt-learning) repository. We thank the authors for releasing their code. 
+Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp), [Maple](https://github.com/muzairkhattak/multimodal-prompt-learning) and [PromptSRC](https://github.com/muzairkhattak/PromptSRC) repository. We thank the authors for releasing their code. 
 
 ## Citing Craft
 
 If you find this repository useful, please consider giving a star :star: and citation
 
 ```
-@inproceedings{girdhar2023imagebind,
+@article{sun2024craft,
   title={Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning},
-  author={Jingchen Sun, Rohan Sharma, Vishnu Suresh Lokhande, Changyou Chen},
-  booktitle={WACV},
-  year={2025}
+  author={Sun, Jingchen and Sharma, Rohan and Lokhande, Vishnu Suresh and Chen, Changyou},
+  journal={arXiv preprint arXiv:2407.15894},
+  year={2024}
 }
 ```
