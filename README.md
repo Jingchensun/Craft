@@ -76,6 +76,12 @@ The default training settings are provided in config file at `configs/trainers/M
 bach maple.sh
 ```
 
+## 4 OOD Training and Evaluation
+
+```bash
+bach maple_ood.sh
+```
+
 #### Averaging results over 3 seeds: 
 Once the above trainings and evaluations are completed, the `output/` directory should have the following structure:
 
