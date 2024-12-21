@@ -4,7 +4,7 @@
 
 # custom config
 DATA="data/"
-TRAINER=MaPLe
+TRAINER=MaPLe_OOD
 
 DATASET=$1
 SEED=$2

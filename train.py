@@ -25,11 +25,8 @@ import datasets.imagenetv2
 import datasets.imagenet_a
 import datasets.imagenet_r
 
-import trainers.coop
-import trainers.cocoop
-import trainers.zsclip
 import trainers.maple
-import trainers.independentVL
+import trainers.maple_ood
 import trainers.promptsrc
 
 import wandb

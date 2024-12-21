@@ -297,7 +297,7 @@ def _get_clones(module, N):
 
 
 @TRAINER_REGISTRY.register()
-class MaPLe(TrainerXU):
+class MaPLe_OOD(TrainerXU):
     def check_cfg(self, cfg):
         assert cfg.TRAINER.MAPLE.PREC in ["fp16", "fp32", "amp"]
 

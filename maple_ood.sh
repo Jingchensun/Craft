@@ -1,5 +1,5 @@
 # #maple Crossdataset Train
-CUDA_VISIBLE_DEVICES=1 bash scripts/maple/xd_train_maple.sh imagenet_ood
+CUDA_VISIBLE_DEVICES=1 bash scripts/maple/xd_train_maple.sh imagenet_ood 1 
 
 # PromptSCR cross dataset test
 # CUDA_VISIBLE_DEVICES=1 bash scripts/maple/xd_test_maple.sh imagenet
