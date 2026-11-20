@@ -1,6 +1,9 @@
 
 ![clap_diagrams](main.png)
 ### [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning
+
+[![Project Page](https://img.shields.io/badge/Project-Page-2563eb?logo=googlechrome&logoColor=white)](https://jingchensun.github.io/Craft/) [![arXiv](https://img.shields.io/badge/arXiv-2407.15894-b31b1b.svg)](https://arxiv.org/abs/2407.15894)
+
 # Installation
 
 This codebase is tested on Ubuntu 20.04.2 LTS with python 3.8. Follow the below steps to create environment and install dependencies.
