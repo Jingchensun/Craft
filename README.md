@@ -1,10 +1,23 @@
+<div align="center">
+<h1> [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning </h1>
 
-![clap_diagrams](main.png)
-### [WACV 2025] Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning
+[Jingchen Sun](https://jingchensun.github.io/)<sup>*</sup>, Rohan Sharma, [Vishnu Suresh Lokhande](https://vlokhande-ub.github.io/)<sup>*</sup>, [Changyou Chen](https://cse.buffalo.edu/~changyou/)
 
-[![Project Page](https://img.shields.io/badge/Project-Page-2563eb?logo=googlechrome&logoColor=white)](https://jingchensun.github.io/Craft/) [![arXiv](https://img.shields.io/badge/arXiv-2407.15894-b31b1b.svg)](https://arxiv.org/abs/2407.15894)
+University at Buffalo, SUNY &nbsp;&nbsp; <sup>*</sup> Corresponding authors
 
-# Installation
+
+[![Project Page](https://img.shields.io/badge/Project-Page-2563eb?logo=googlechrome&logoColor=white)](https://jingchensun.github.io/Craft/)
+[![GitHub Project](https://img.shields.io/badge/GitHub-Project-blue?logo=github)](https://github.com/Jingchensun/Craft)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.15894-b31b1b.svg)](https://arxiv.org/abs/2407.15894) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+</div>
+
+## Introduction
+We propose a novel cross-modal feature alignment method that mitigates the overfitting issue in visual-language model prompt tuning across different domains. [[Paper](https://openaccess.thecvf.com/content/WACV2025/html/Sun_Cross-Modal_Feature_Alignment_and_MMD_Improve_Robustness_of_Prompt_Tuning_WACV_2025_paper.html)] [[Project Page](https://jingchensun.github.io/Craft/)]
+<div align="center">
+<img src="main.png" width="70%">
+</div>
+
+## Installation
 
 This codebase is tested on Ubuntu 20.04.2 LTS with python 3.8. Follow the below steps to create environment and install dependencies.
 
